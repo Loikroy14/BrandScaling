@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brand Scaling</title>
+<title>Envergure</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="L'équipe de croissance des marques de vêtements canadiennes : marque, publicité, contenu, site et rétention.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,6 +99,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pill.now { background: var(--signal); color: #11131c; border-color: #11131c; }
 .pill.next { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .plan-foot { font: 400 0.7rem/1.4 var(--font-mono); color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
+
+.price { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto; gap: 16px; align-items: center; background: var(--surface); border: 2px solid var(--ink); border-radius: 20px; padding: 24px; }
+.price-item { display: grid; gap: 6px; min-width: 0; }
+.price-item.main { padding-left: 16px; border-left: 1px solid var(--line); }
+.price-item b { font: 850 2.4rem/1 var(--font-display); font-stretch: 70%; font-variant-numeric: tabular-nums; }
+.price-item b small { font: 500 0.9rem var(--font-mono); color: var(--muted); margin-left: 4px; }
+.price-item p { color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 760px) { .price { grid-template-columns: 1fr; } .price-item.main { padding-left: 0; border-left: 0; padding-top: 16px; border-top: 1px solid var(--line); } .price .btn { justify-self: start; } }
 
 /* Sections */
 section.block { border-top: 1px solid var(--line); }
@@ -201,8 +209,8 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 -->
 <script>
   window.AGENCE = {
-    nom: "Brand Scaling",
-    courriel: "bonjour@votreagence.ca",
+    nom: "Envergure",
+    courriel: "bonjour@envergureagence.com",
     lienRendezVous: "https://calendly.com/VOTRE-LIEN/appel-20-min",
     marquePilote: "Spoon"
   };
@@ -210,7 +218,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span data-agence="nom">Brand Scaling</span></a>
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span data-agence="nom">Envergure</span></a>
     <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver<span class="long">&nbsp;un appel</span></a>
   </div>
 </header>
@@ -220,8 +228,8 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
     <div class="wrap">
       <div class="hero-copy">
         <p class="eyebrow">Brand scaling pour marques de vêtements canadiennes</p>
-        <h1>Passez au palier suivant. <span class="hl">Sans que tout repose sur vous.</span></h1>
-        <p class="lede">Votre marque de vêtements vend déjà. On prend en main toute sa croissance avec un seul plan et un seul objectif : votre prochain palier de ventes mensuelles. Piloté chaque semaine sur vos chiffres, en français et en anglais.</p>
+        <h1>Des ventes chaque mois. <span class="hl">Pas juste les jours de drop.</span></h1>
+        <p class="lede">Votre marque de vêtements vend déjà, mais tout repose sur vous et les ventes retombent entre les lancements. Notre programme prend en main toute sa croissance pour vous faire passer au palier suivant. Piloté chaque semaine sur vos chiffres, en français et en anglais.</p>
         <div class="cta-row">
           <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver un appel de 20 min</a>
           <a class="btn btn-ghost" href="#offre">Voir l'offre</a>
@@ -279,8 +287,8 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">L'offre</p>
-        <h2>Une seule offre. Un seul résultat visé.</h2>
-        <p class="lede">On s'engage sur votre prochain palier de ventes et on fait le nécessaire pour y arriver. Vous n'achetez pas une liste de services : voici ce qu'on utilise, dans l'ordre qui rapporte selon vos chiffres.</p>
+        <h2>Un seul programme. Un seul résultat visé.</h2>
+        <p class="lede">Des ventes chaque mois, pas juste les jours de drop. Vous n'achetez pas une liste de services : voici ce que le programme utilise, dans l'ordre qui rapporte selon vos chiffres.</p>
       </div>
       <div class="deliver">
         <div><h3>Marque et positionnement</h3><p>Avatar client, promesse, identité et ton. Une marque qu'on reconnaît en une seconde dans le fil.</p></div>
@@ -289,6 +297,11 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
         <div><h3>Site Shopify et conversion</h3><p>Pages produit, guide des tailles, panier et vitesse. Plus de ventes avec le même trafic.</p></div>
         <div><h3>Email et SMS</h3><p>Flux automatisés et campagnes de drop, conformes à la LCAP. Les ventes continuent entre les lancements.</p></div>
         <div><h3>Lancements de drops</h3><p>Liste VIP, ouverture, rareté et relances orchestrées sur tous les canaux à la fois.</p></div>
+      </div>
+      <div class="price">
+        <div class="price-item"><span class="eyebrow">Pour commencer</span><b>600 $</b><p>Diagnostic de croissance, livré en 10 jours.</p></div>
+        <div class="price-item main"><span class="eyebrow">Le programme Envergure</span><b>2 900 $<small>/mois</small></b><p>Tout ce qui est ci-dessus, piloté avec vous chaque semaine. Sans contrat à long terme.</p></div>
+        <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver un appel</a>
       </div>
     </div>
   </section>
@@ -338,7 +351,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
             <li>Un plan de croissance écrit à la fin du diagnostic.</li>
             <li>Un point hebdomadaire et un tableau de bord à jour.</li>
             <li>Les livrables promis chaque mois, aux dates promises.</li>
-            <li>Une date manquée de notre côté, et le mois suivant est offert.</li>
+            <li>Une date de livraison manquée de notre côté, et 50 % du mois vous est remboursé.</li>
           </ul>
         </div>
         <div class="card no">
@@ -357,7 +370,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
       <div class="proof">
         <div class="section-head">
           <span class="status"><i aria-hidden="true"></i>Étude de cas en cours</span>
-          <h2><span data-agence="marquePilote">Spoon</span> × <span data-agence="nom">Brand Scaling</span></h2>
+          <h2><span data-agence="marquePilote">Spoon</span> × <span data-agence="nom">Envergure</span></h2>
           <p class="lede">Notre premier client accompagné est <span data-agence="marquePilote">Spoon</span>, une marque de vêtements canadienne. Les résultats seront publiés ici à la fin du premier cycle, chiffres réels et avec leur accord.</p>
         </div>
         <div class="metrics" aria-label="Ce que l'étude de cas mesurera">
@@ -402,12 +415,12 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Pour commencer</p>
-        <h2>Trois étapes, pas d'engagement au départ.</h2>
+        <h2>Trois étapes, sans engagement à long terme.</h2>
       </div>
       <ol class="steps3">
         <li><span class="n">Étape 1</span><h3>Appel de 20 minutes</h3><p>Vos ventes, vos canaux, votre prochain drop. On voit si on peut vous aider.</p></li>
-        <li><span class="n">Étape 2</span><h3>Diagnostic de croissance</h3><p>Offert. Les trois endroits où votre marque perd le plus de ventes, chiffrés.</p></li>
-        <li><span class="n">Étape 3</span><h3>Plan et premier mois</h3><p>On attaque le levier le plus rentable. Vous décidez ensuite si on continue.</p></li>
+        <li><span class="n">Étape 2 · 600 $</span><h3>Diagnostic de croissance</h3><p>Les trois endroits où votre marque perd le plus de ventes, chiffrés, avec le plan pour les récupérer.</p></li>
+        <li><span class="n">Étape 3 · 2 900 $/mois</span><h3>Le programme</h3><p>On attaque le levier le plus rentable, puis les suivants. Vous décidez chaque mois si on continue.</p></li>
       </ol>
     </div>
   </section>
@@ -433,14 +446,14 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
       <h2>Faisons grandir votre marque.</h2>
       <p>Réservez 20 minutes. On vous dit où votre marque perd des ventes, même si on ne travaille pas ensemble.</p>
       <a class="btn btn-primary" data-agence-lien="rdv" href="https://calendly.com/VOTRE-LIEN/appel-20-min" target="_blank" rel="noopener">Réserver un appel de 20 min</a>
-      <p class="contact">Ou écrivez-nous : <span data-agence="courriel">bonjour@votreagence.ca</span></p>
+      <p class="contact">Ou écrivez-nous : <span data-agence="courriel">bonjour@envergureagence.com</span></p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 <span data-agence="nom">Brand Scaling</span> · Québec, Canada</span>
+    <span>© 2026 <span data-agence="nom">Envergure</span> · Québec, Canada</span>
     <span>Croissance des marques de vêtements canadiennes</span>
   </div>
 </footer>
