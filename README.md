@@ -24,6 +24,7 @@ dans le fichier.
 
 | Nom | .ca | .com |
 |---|---|---|
+| Restock (proposé au fil Fondations) | restockagency.ca et agencerestock.ca disponibles | restockagency.com et agencerestock.com disponibles |
 | Cadence Drop | cadencedrop.ca disponible | cadencedrop.com disponible |
 | Boréal Drop | borealdrop.ca disponible | borealdrop.com disponible |
 | Studio Relance | studiorelance.ca disponible | pris |
