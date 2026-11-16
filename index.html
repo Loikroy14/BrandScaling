@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Cadence Drop</title>
+<title>Brand Scaling</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Système email + SMS bilingue pour les marques de vêtements canadiennes qui vendent par drops.">
+<meta name="description" content="L'équipe de croissance des marques de vêtements canadiennes : marque, publicité, contenu, site et rétention.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Mise en page : une seule colonne éditoriale, un téléphone SMS en vedette, une frise de drop J-7 → J+30. */
+/* Mise en page : une seule colonne éditoriale, un plan de croissance en vedette, une frise de méthode en 4 phases. */
 :root {
   --bg: #f3f4f7;
   --surface: #ffffff;
@@ -84,19 +84,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 500 0.82rem/1.4 var(--font-mono); color: var(--muted); }
 .facts span::before { content: "■ "; color: var(--accent); }
 
-.phone {
-  justify-self: center; width: 100%; max-width: 330px; background: var(--surface);
-  border: 2px solid var(--ink); border-radius: 38px; padding: 18px 16px 22px; box-shadow: 10px 10px 0 var(--ink);
+.plan {
+  justify-self: center; width: 100%; max-width: 380px; background: var(--surface);
+  border: 2px solid var(--ink); border-radius: 22px; padding: 22px; box-shadow: 10px 10px 0 var(--ink);
+  display: grid; gap: 14px;
 }
-.phone-head { text-align: center; display: grid; gap: 2px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
-.phone-head b { font-size: 0.95rem; }
-.phone-head small { font: 400 0.72rem var(--font-mono); color: var(--muted); }
-.thread { display: grid; gap: 10px; }
-.stamp { font: 400 0.7rem var(--font-mono); color: var(--muted); text-align: center; }
-.bubble { background: var(--bubble-in); padding: 10px 13px; border-radius: 18px 18px 18px 4px; font-size: 0.9rem; line-height: 1.4; max-width: 92%; }
-.bubble.out { justify-self: end; background: var(--accent); color: var(--accent-ink); border-radius: 18px 18px 4px 18px; }
-.bubble .link { text-decoration: underline; }
-.phone-foot { margin-top: 12px; font: 400 0.68rem/1.4 var(--font-mono); color: var(--muted); text-align: center; }
+.plan-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.plan-head b { font: 800 1.15rem/1.1 var(--font-display); font-stretch: 80%; text-transform: uppercase; }
+.plan-head small { font: 400 0.72rem var(--font-mono); color: var(--muted); white-space: nowrap; }
+.lever { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; }
+.lever span { font-weight: 600; font-size: 0.95rem; }
+.lever small { grid-column: 1 / -1; color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
+.pill { font: 500 0.68rem/1 var(--font-mono); font-style: normal; letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; border: 1px solid var(--ink); white-space: nowrap; }
+.pill.now { background: var(--signal); color: #11131c; border-color: #11131c; }
+.pill.next { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.plan-foot { font: 400 0.7rem/1.4 var(--font-mono); color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
 
 /* Sections */
 section.block { border-top: 1px solid var(--line); }
@@ -110,7 +112,7 @@ section.block > .wrap { padding-block: 88px; display: grid; gap: 40px; }
 .pain .big { font: 850 2.6rem/1 var(--font-display); font-stretch: 70%; }
 
 /* Frise du drop */
-.timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: none; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; counter-reset: none; }
 .step { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; position: relative; }
 .step .day { font: 850 1.9rem/1 var(--font-display); font-stretch: 70%; }
 .step .chan { justify-self: start; font: 500 0.7rem/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; border: 1px solid var(--ink); }
@@ -122,7 +124,8 @@ section.block > .wrap { padding-block: 88px; display: grid; gap: 40px; }
 .step.peak .chan.sms { border-color: #11131c; }
 
 /* Livrables */
-.deliver { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.deliver { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
+@media (max-width: 960px) { .deliver { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .deliver div { padding-block: 20px; border-top: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; }
 .deliver p { color: var(--muted); }
 
@@ -175,7 +178,6 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 @media (max-width: 960px) {
   .hero .wrap { grid-template-columns: 1fr; padding-block: 48px 64px; gap: 48px; }
   .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .timeline .peak { grid-column: span 2; }
   .proof { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
@@ -184,9 +186,8 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
   .pains, .deliver, .promise, .fit, .steps3 { grid-template-columns: 1fr; }
   .pain + .pain { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .timeline { grid-template-columns: 1fr; }
-  .timeline .peak { grid-column: auto; }
   .proof { padding: 24px; }
-  .phone { box-shadow: 6px 6px 0 var(--ink); }
+  .plan { box-shadow: 6px 6px 0 var(--ink); }
   .top .btn span.long { display: none; }
 }
 </style>
@@ -200,8 +201,8 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 -->
 <script>
   window.AGENCE = {
-    nom: "Cadence Drop",
-    courriel: "bonjour@cadencedrop.ca",
+    nom: "Brand Scaling",
+    courriel: "bonjour@votreagence.ca",
     lienRendezVous: "https://calendly.com/VOTRE-LIEN/appel-20-min",
     marquePilote: "Spoon"
   };
@@ -209,7 +210,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span data-agence="nom">Cadence Drop</span></a>
+    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span data-agence="nom">Brand Scaling</span></a>
     <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver<span class="long">&nbsp;un appel</span></a>
   </div>
 </header>
@@ -218,35 +219,31 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="eyebrow">Email + SMS pour marques de vêtements canadiennes</p>
-        <h1>Chaque drop vend plus. <span class="hl">Et vous vendez entre les drops.</span></h1>
-        <p class="lede">On construit et on opère le système email et SMS autour de vos lancements : la liste VIP avant, l'ouverture minute par minute, les relances après. En français et en anglais, conforme à la LCAP.</p>
+        <p class="eyebrow">Brand scaling pour marques de vêtements canadiennes</p>
+        <h1>Votre marque a percé. <span class="hl">On la fait passer à l'échelle.</span></h1>
+        <p class="lede">Marque, publicité, contenu, site et rétention. Une seule équipe, un seul plan de croissance, piloté chaque semaine sur vos chiffres. En français et en anglais.</p>
         <div class="cta-row">
           <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver un appel de 20 min</a>
-          <a class="btn btn-ghost" href="#systeme">Voir le système</a>
+          <a class="btn btn-ghost" href="#leviers">Voir ce qu'on fait</a>
         </div>
         <div class="facts">
-          <span>Klaviyo ou Shopify Email</span>
+          <span>Shopify</span>
+          <span>Meta · TikTok · Google</span>
           <span>FR + EN</span>
-          <span>Rapport après chaque drop</span>
         </div>
       </div>
 
-      <div class="phone" aria-label="Exemple de séquence SMS pour un drop">
-        <div class="phone-head">
-          <b>Votre marque</b>
-          <small>Liste VIP · 1 284 abonnés (exemple)</small>
+      <div class="plan" aria-label="Exemple de plan de croissance">
+        <div class="plan-head">
+          <b>Plan de croissance</b>
+          <small>Semaine 6 · exemple</small>
         </div>
-        <div class="thread">
-          <p class="stamp">Jeu. 18 h 00</p>
-          <p class="bubble">Le drop Hiver ouvre demain à 12 h. Vous avez accès 1 h avant tout le monde. Répondez OUI pour recevoir le lien.</p>
-          <p class="bubble out">OUI</p>
-          <p class="stamp">Ven. 11 h 00</p>
-          <p class="bubble">C'est ouvert pour vous. Les tailles M partent vite : <span class="link">votremarque.ca/vip</span></p>
-          <p class="stamp">Dim. 10 h 00</p>
-          <p class="bubble">Votre panier vous attend encore. Il reste 3 vestes en L.</p>
-        </div>
-        <p class="phone-foot">STOP pour vous désabonner</p>
+        <div class="lever"><span>Marque et positionnement</span><em class="pill">Fait</em><small>Avatar, promesse, ton FR/EN</small></div>
+        <div class="lever"><span>Créatives et UGC</span><em class="pill now">En cours</em><small>12 nouvelles pubs, 4 angles testés</small></div>
+        <div class="lever"><span>Publicité Meta et TikTok</span><em class="pill now">En cours</em><small>Budget monté par paliers selon le coût d'acquisition</small></div>
+        <div class="lever"><span>Site Shopify et conversion</span><em class="pill">Fait</em><small>Pages produit et panier refaits</small></div>
+        <div class="lever"><span>Email et SMS</span><em class="pill next">Prochain drop</em><small>Liste VIP, séquence J-7 à J+30</small></div>
+        <p class="plan-foot">Exemple de tableau de suivi client. Chiffres illustratifs.</p>
       </div>
     </div>
   </section>
@@ -255,80 +252,76 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Le problème</p>
-        <h2>Un gros jour de ventes, puis le silence.</h2>
-        <p class="lede">Les marques à drops vivent en pics. La journée de lancement est excellente, puis les ventes retombent jusqu'au prochain. La liste email existe, mais personne n'a le temps de la faire travailler.</p>
+        <h2>Vous avez une marque. Il vous manque la machine.</h2>
+        <p class="lede">Le produit plaît et les premiers drops partent. Puis la croissance plafonne, parce que chaque partie du marketing avance seule.</p>
       </div>
       <div class="pains">
         <div class="pain">
+          <span class="big">5 presta.</span>
+          <h3>Personne ne pilote</h3>
+          <p>Un pigiste pour les pubs, un autre pour le site, l'infolettre quand vous avez le temps. Personne ne regarde l'ensemble.</p>
+        </div>
+        <div class="pain">
           <span class="big">J+3</span>
           <h3>Les ventes retombent</h3>
-          <p>Sans relances de panier et sans séquence après-achat, le trafic du lancement repart sans acheter une deuxième fois.</p>
+          <p>Le jour du drop est excellent, puis c'est le silence jusqu'au prochain. Rien ne fait vendre entre deux lancements.</p>
         </div>
         <div class="pain">
-          <span class="big">1 envoi</span>
-          <h3>La liste dort</h3>
-          <p>Une infolettre le jour du drop, et rien entre les deux. Les abonnés oublient la marque avant le prochain lancement.</p>
-        </div>
-        <div class="pain">
-          <span class="big">FR</span>
-          <h3>Le Québec demande le français</h3>
-          <p>Depuis juin 2025, la Charte de la langue française s'applique aux sites et aux communications des marques qui vendent au Québec.</p>
+          <span class="big">CPA ↑</span>
+          <h3>La pub ne monte pas</h3>
+          <p>Quand le budget augmente, les mêmes créatives s'usent et le coût par vente grimpe. La marge disparaît.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="systeme">
+  <section class="block" id="leviers">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Le système</p>
-        <h2>Un drop, de J-7 à J+30.</h2>
-        <p class="lede">Chaque lancement suit la même cadence. On la construit une fois, puis on l'ajuste à chaque drop selon les chiffres.</p>
+        <p class="eyebrow">Ce qu'on fait</p>
+        <h2>Tous les leviers, un seul plan.</h2>
+        <p class="lede">On s'occupe de tout ce qui fait grandir une marque de vêtements en ligne, et on décide ensemble de l'ordre selon vos chiffres.</p>
+      </div>
+      <div class="deliver">
+        <div><h3>Marque et positionnement</h3><p>Avatar client, promesse, identité et ton. Une marque qu'on reconnaît en une seconde dans le fil.</p></div>
+        <div><h3>Créatives et UGC</h3><p>Pubs statiques et vidéo, contenu de créateurs, de nouveaux angles testés chaque mois.</p></div>
+        <div><h3>Publicité payante</h3><p>Meta, TikTok et Google. Budget monté par paliers, coupé quand le coût d'acquisition dérape.</p></div>
+        <div><h3>Site Shopify et conversion</h3><p>Pages produit, guide des tailles, panier et vitesse. Plus de ventes avec le même trafic.</p></div>
+        <div><h3>Email et SMS</h3><p>Flux automatisés et campagnes de drop, conformes à la LCAP. Les ventes continuent entre les lancements.</p></div>
+        <div><h3>Lancements de drops</h3><p>Liste VIP, ouverture, rareté et relances orchestrées sur tous les canaux à la fois.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="methode">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">La méthode</p>
+        <h2>De la marque qui perce à la marque qui scale.</h2>
+        <p class="lede">On ne fait pas tout en même temps. On répare ce qui fuit, puis on accélère ce qui marche.</p>
       </div>
       <ol class="timeline">
         <li class="step">
-          <span class="day">J-7</span>
-          <span class="chan">Email</span>
-          <p>Teaser et inscription à la liste VIP. On capte les numéros avec un consentement clair.</p>
+          <span class="day">Sem. 1–2</span>
+          <span class="chan">Diagnostic</span>
+          <p>Audit de la marque, des pubs, du site, de la liste et des chiffres. On trouve où l'argent se perd.</p>
         </li>
         <li class="step">
-          <span class="day">J-1</span>
-          <span class="chan sms">SMS</span>
-          <p>Rappel aux VIP avec l'heure exacte et l'accès en avance.</p>
+          <span class="day">Mois 1</span>
+          <span class="chan">Fondations</span>
+          <p>Positionnement clair, suivi des ventes fiable, site et flux email qui convertissent.</p>
         </li>
         <li class="step peak">
-          <span class="day">Jour J</span>
-          <span class="chan sms">SMS + Email</span>
-          <p>Ouverture VIP, puis ouverture publique. Un message de rareté quand les tailles baissent.</p>
+          <span class="day">Mois 2–3</span>
+          <span class="chan sms">Accélération</span>
+          <p>Nouvelles créatives chaque semaine, publicité testée, premier drop orchestré de bout en bout.</p>
         </li>
         <li class="step">
-          <span class="day">J+3</span>
-          <span class="chan">Email + SMS</span>
-          <p>Paniers abandonnés et navigation sans achat, avec le stock réel.</p>
-        </li>
-        <li class="step">
-          <span class="day">J+30</span>
-          <span class="chan">Email</span>
-          <p>Après-achat, avis, style et réactivation. Les ventes continuent entre les drops.</p>
+          <span class="day">Mois 4+</span>
+          <span class="chan">Scale</span>
+          <p>On monte le budget sur ce qui rapporte, on ouvre de nouveaux canaux et marchés, Québec et reste du Canada.</p>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <section class="block" id="livrables">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Ce que vous recevez</p>
-        <h2>Fait pour vous, pas un cours.</h2>
-      </div>
-      <div class="deliver">
-        <div><h3>Flux automatisés</h3><p>Bienvenue, panier abandonné, après-achat, réactivation. Ils tournent tous les jours, drop ou pas.</p></div>
-        <div><h3>Campagnes de lancement</h3><p>La séquence J-7 à J+30 écrite, montée et programmée pour chaque drop.</p></div>
-        <div><h3>SMS conforme</h3><p>Collecte du consentement, identification et désabonnement selon la LCAP.</p></div>
-        <div><h3>Bilingue</h3><p>Chaque message en français et en anglais, écrit pour le Québec et le reste du Canada.</p></div>
-        <div><h3>Rapport après chaque drop</h3><p>Revenus attribués par campagne et par flux, taux de réachat, ce qu'on change au prochain.</p></div>
-        <div><h3>Un seul interlocuteur</h3><p>Vous validez, on exécute. Pas de cinq prestataires à coordonner.</p></div>
-      </div>
     </div>
   </section>
 
@@ -342,9 +335,9 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
         <div class="card yes">
           <h3>Garanti</h3>
           <ul>
-            <li>Chaque campagne prête et programmée 48 h avant le drop.</li>
-            <li>Vos flux de base actifs en 14 jours.</li>
-            <li>Un rapport chiffré au plus tard 7 jours après chaque drop.</li>
+            <li>Un plan de croissance écrit à la fin du diagnostic.</li>
+            <li>Un point hebdomadaire et un tableau de bord à jour.</li>
+            <li>Les livrables promis chaque mois, aux dates promises.</li>
             <li>Une date manquée de notre côté, et le mois suivant est offert.</li>
           </ul>
         </div>
@@ -352,7 +345,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
           <h3>Pas promis</h3>
           <ul>
             <li>Un chiffre de ventes précis. Il dépend aussi du produit, du prix et du stock.</li>
-            <li>Des résultats sans liste. Si vous partez de zéro, on commence par la capter.</li>
+            <li>Des résultats en une semaine. Il faut un à trois mois pour que les tests parlent.</li>
           </ul>
         </div>
       </div>
@@ -364,14 +357,14 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
       <div class="proof">
         <div class="section-head">
           <span class="status"><i aria-hidden="true"></i>Étude de cas en cours</span>
-          <h2><span data-agence="marquePilote">Spoon</span> × <span data-agence="nom">Cadence Drop</span></h2>
-          <p class="lede">Notre premier sprint de 30 jours se fait avec <span data-agence="marquePilote">Spoon</span>, une marque de vêtements canadienne. Les résultats seront publiés ici à la fin du sprint, chiffres réels et avec leur accord.</p>
+          <h2><span data-agence="marquePilote">Spoon</span> × <span data-agence="nom">Brand Scaling</span></h2>
+          <p class="lede">Notre premier client accompagné est <span data-agence="marquePilote">Spoon</span>, une marque de vêtements canadienne. Les résultats seront publiés ici à la fin du premier cycle, chiffres réels et avec leur accord.</p>
         </div>
         <div class="metrics" aria-label="Ce que l'étude de cas mesurera">
-          <div class="metric"><span>Revenus attribués à l'email et au SMS</span><span>à venir</span></div>
-          <div class="metric"><span>Ventes entre deux drops</span><span>à venir</span></div>
-          <div class="metric"><span>Taux de réachat à 30 jours</span><span>à venir</span></div>
-          <div class="metric"><span>Croissance de la liste VIP</span><span>à venir</span></div>
+          <div class="metric"><span>Ventes mensuelles</span><span>à venir</span></div>
+          <div class="metric"><span>Coût d'acquisition client</span><span>à venir</span></div>
+          <div class="metric"><span>Taux de conversion du site</span><span>à venir</span></div>
+          <div class="metric"><span>Part des ventes entre les drops</span><span>à venir</span></div>
         </div>
       </div>
     </div>
@@ -388,17 +381,17 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
           <h3>Pour vous si</h3>
           <ul>
             <li>Vous vendez des vêtements en ligne au Canada.</li>
+            <li>Vous faites environ 15 000 $ à 150 000 $ par mois.</li>
             <li>Vous lancez par drops ou par collections.</li>
-            <li>Vous faites environ 200 000 $ à 2 M$ par année.</li>
-            <li>Vous avez déjà une liste email, même petite.</li>
+            <li>Vous voulez des ventes régulières sans casser vos prix.</li>
           </ul>
         </div>
         <div class="ko">
           <h3>Pas pour vous si</h3>
           <ul>
-            <li>Vous cherchez une agence qui fait tout : pub, site, photo.</li>
             <li>Vous n'avez pas encore fait de première vente.</li>
-            <li>Vous voulez des envois massifs sans consentement.</li>
+            <li>Vous cherchez seulement un pigiste pour une tâche.</li>
+            <li>Vous voulez des soldes permanents pour faire du volume.</li>
           </ul>
         </div>
       </div>
@@ -412,9 +405,9 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
         <h2>Trois étapes, pas d'engagement au départ.</h2>
       </div>
       <ol class="steps3">
-        <li><span class="n">Étape 1</span><h3>Appel de 20 minutes</h3><p>On regarde votre rythme de drops, votre liste et votre outil email.</p></li>
-        <li><span class="n">Étape 2</span><h3>Audit de votre dernier drop</h3><p>Offert. Ce qui a été envoyé, ce qui manquait, et ce que ça vous a probablement coûté.</p></li>
-        <li><span class="n">Étape 3</span><h3>Sprint de 30 jours</h3><p>Flux de base et séquence du prochain drop. Vous décidez ensuite si on continue.</p></li>
+        <li><span class="n">Étape 1</span><h3>Appel de 20 minutes</h3><p>Vos ventes, vos canaux, votre prochain drop. On voit si on peut vous aider.</p></li>
+        <li><span class="n">Étape 2</span><h3>Diagnostic de croissance</h3><p>Offert. Les trois endroits où votre marque perd le plus de ventes, chiffrés.</p></li>
+        <li><span class="n">Étape 3</span><h3>Plan et premier mois</h3><p>On attaque le levier le plus rentable. Vous décidez ensuite si on continue.</p></li>
       </ol>
     </div>
   </section>
@@ -426,29 +419,29 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
         <h2>Questions fréquentes</h2>
       </div>
       <div>
-        <details><summary>Quel outil faut-il ?</summary><p>Klaviyo ou Shopify Email pour le courriel. Pour le SMS, on travaille avec l'outil que vous avez déjà ou on vous en recommande un.</p></details>
-        <details><summary>Et si ma liste est petite ?</summary><p>Une petite liste engagée vend bien pendant un drop. Le premier mois sert souvent à la faire grossir avec la liste VIP.</p></details>
-        <details><summary>Les SMS, c'est légal au Canada ?</summary><p>Oui, avec un consentement clair, l'identification de l'expéditeur et un moyen simple de se désabonner. C'est intégré dès la collecte des numéros.</p></details>
-        <details><summary>Vous faites aussi la publicité Meta ou TikTok ?</summary><p>Non. On se concentre sur l'email et le SMS pour bien le faire. On peut travailler avec votre agence pub si vous en avez une.</p></details>
+        <details><summary>Faut-il tout prendre d'un coup ?</summary><p>Non. On commence par le levier qui rapporte le plus vite selon le diagnostic, puis on ajoute les autres quand le premier tourne.</p></details>
+        <details><summary>Vous travaillez avec mon équipe actuelle ?</summary><p>Oui. Si vous avez déjà un photographe, un designer ou une agence pub, on les intègre au plan plutôt que de tout remplacer.</p></details>
+        <details><summary>Quelle plateforme faut-il ?</summary><p>Shopify pour le site. Pour l'email, Klaviyo ou Shopify Email. Pour la pub, Meta, TikTok et Google.</p></details>
+        <details><summary>Et le Québec ?</summary><p>Tout est produit en français et en anglais. Depuis juin 2025, la Charte de la langue française s'applique aux sites et aux communications des marques qui vendent au Québec.</p></details>
       </div>
     </div>
   </section>
 
   <section class="final" id="rdv">
     <div class="wrap">
-      <p class="eyebrow" style="color: inherit; opacity: .7">Prochain drop bientôt ?</p>
-      <h2>Préparons-le ensemble.</h2>
-      <p>Réservez 20 minutes. On vous dit ce qu'on changerait à votre prochain lancement, même si on ne travaille pas ensemble.</p>
+      <p class="eyebrow" style="color: inherit; opacity: .7">Prêt à passer à la prochaine étape ?</p>
+      <h2>Faisons grandir votre marque.</h2>
+      <p>Réservez 20 minutes. On vous dit où votre marque perd des ventes, même si on ne travaille pas ensemble.</p>
       <a class="btn btn-primary" data-agence-lien="rdv" href="https://calendly.com/VOTRE-LIEN/appel-20-min" target="_blank" rel="noopener">Réserver un appel de 20 min</a>
-      <p class="contact">Ou écrivez-nous : <span data-agence="courriel">bonjour@cadencedrop.ca</span></p>
+      <p class="contact">Ou écrivez-nous : <span data-agence="courriel">bonjour@votreagence.ca</span></p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 <span data-agence="nom">Cadence Drop</span> · Québec, Canada</span>
-    <span>Email + SMS pour marques de vêtements</span>
+    <span>© 2026 <span data-agence="nom">Brand Scaling</span> · Québec, Canada</span>
+    <span>Croissance des marques de vêtements canadiennes</span>
   </div>
 </footer>
 
@@ -466,7 +459,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
         el.setAttribute("rel", "noopener");
       });
     }
-    if (a.nom) document.title = a.nom + " · Email + SMS pour marques de vêtements";
+    if (a.nom) document.title = a.nom + " · Croissance des marques de vêtements canadiennes";
   })();
 </script>
 </body>
