@@ -7,11 +7,11 @@ Page d'atterrissage statique (un seul fichier, `index.html`, aucune dépendance)
 > L'équipe de croissance des marques de vêtements canadiennes : marque, publicité,
 > contenu, site et rétention, pilotés ensemble dans un seul plan, sur vos chiffres.
 
-Cible : marques de vêtements canadiennes à drops, ~15 000 à 150 000 $ CA par mois.
+Cible : marques de vêtements canadiennes à drops, ~30 000 à 300 000 $ CA par mois, dont la croissance plafonne parce que tout repose sur le fondateur. La page vend un seul résultat (le palier suivant) et une seule offre.
 
 ## Nom provisoire : Brand Scaling
 
-Le nom final n'est pas choisi. Tout ce qui dépend de lui est dans le bloc
+Le nom final n'est pas choisi (recommandé par le fil Fondations : Envergure, envergureagence.com). Tout ce qui dépend de lui est dans le bloc
 `window.AGENCE` en haut du `<body>` de `index.html` :
 
 ```js
