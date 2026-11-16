@@ -28,6 +28,21 @@ Changez ces valeurs et la page se met à jour. Pour que le nom soit aussi dans l
 brut (aperçus de liens, moteurs de recherche), remplacez aussi `Envergure` partout
 dans le fichier.
 
+## Identité visuelle
+
+| Rôle | Couleur | Code |
+|---|---|---|
+| Texte, contours, fonds forts | Encre | `#11131C` |
+| Couleur de marque, boutons | Cobalt | `#2F45F5` |
+| Accent, surlignage, étiquettes | Jaune signal | `#FFD23F` |
+| Fond | Béton | `#F3F4F7` |
+
+- Titres : Archivo condensé, très gras, en majuscules.
+- Texte : IBM Plex Sans. Étiquettes et chiffres : IBM Plex Mono.
+- Logo : le mot ENVERGURE en Archivo condensé, précédé d'un symbole d'ailes déployées
+  (un V large et plat en cobalt, avec un point jaune à la pointe).
+- Règle : une seule touche de jaune par écran, le cobalt pour les actions.
+
 ## Offre
 
 - Diagnostic de croissance : 600 $

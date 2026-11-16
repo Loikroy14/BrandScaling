@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Mise en page : une seule colonne éditoriale, un plan de croissance en vedette, une frise de méthode en 4 phases. */
+/* Identité Envergure : Encre #11131C, Cobalt #2F45F5, Jaune signal #FFD23F, Béton #F3F4F7. Titres Archivo condensé en majuscules, texte IBM Plex Sans, étiquettes IBM Plex Mono.
+   Mise en page : une seule colonne éditoriale, un plan de croissance en vedette, une frise de méthode en 4 phases. */
 :root {
   --bg: #f3f4f7;
   --surface: #ffffff;
@@ -73,7 +74,9 @@ header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; 
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 21; background: var(--bg); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
 .logo { font: 850 1.35rem/1 var(--font-display); font-stretch: 70%; text-transform: uppercase; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 10px; }
-.logo-mark { width: 14px; height: 14px; background: var(--signal); border: 2px solid var(--ink); border-radius: 50%; }
+.logo-mark { width: 34px; height: 16px; flex: none; }
+.logo-mark path { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: square; stroke-linejoin: miter; }
+.logo-mark circle { fill: var(--signal); stroke: var(--ink); stroke-width: 1.5; }
 .top .btn { padding: 0.6em 1em; font-size: 0.92rem; }
 
 /* Héro */
@@ -218,7 +221,7 @@ footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; justify-cont
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span data-agence="nom">Envergure</span></a>
+    <a class="logo" href="#"><svg class="logo-mark" viewBox="0 0 34 16" aria-hidden="true"><path d="M2 3 L17 12 L32 3"/><circle cx="17" cy="12" r="3.2"/></svg><span data-agence="nom">Envergure</span></a>
     <a class="btn btn-primary" data-agence-lien="rdv" href="#rdv">Réserver<span class="long">&nbsp;un appel</span></a>
   </div>
 </header>
